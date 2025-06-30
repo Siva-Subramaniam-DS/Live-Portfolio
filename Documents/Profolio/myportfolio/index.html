@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siva Subramanian R - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-Cd17Oqcj.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CO9mM_QK.css">
+</head>
+<body>
+    <div id="root"></div>
+    
+    <!-- Source Code Protection Script -->
+    <script>
+      // Anti-debugging and source code protection
+      (function() {
+        'use strict';
+        
+        let devtools = {
+          open: false,
+          orientation: null
+        };
+        
+        const threshold = 160;
+        
+        setInterval(function() {
+          if (window.outerHeight - window.innerHeight > threshold || 
+              window.outerWidth - window.innerWidth > threshold) {
+            if (!devtools.open) {
+              devtools.open = true;
+              showWarningMessage();
+            }
+          } else {
+            devtools.open = false;
+          }
+        }, 500);
+        
+        function showWarningMessage() {
+          // Create warning overlay
+          const overlay = document.createElement('div');
+          overlay.id = 'dev-warning-overlay';
+          overlay.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Courier New', monospace;
+            color: #ff6b6b;
+            text-align: center;
+            backdrop-filter: blur(10px);
+          `;
+          
+          overlay.innerHTML = `
+            <div style="max-width: 600px; padding: 40px; border: 2px solid #ff6b6b; border-radius: 10px; background: rgba(20, 20, 20, 0.9);">
+              <div style="font-size: 3rem; margin-bottom: 20px;">⚠️</div>
+              <h1 style="color: #ff6b6b; font-size: 2rem; margin-bottom: 20px; text-shadow: 0 0 10px #ff6b6b;">ACCESS DENIED</h1>
+              <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 20px;">
+                🔒 This code contains proprietary algorithms and confidential information.
+              </p>
+              <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 20px; color: #ffa726;">
+                ⚡ Unauthorized access to source code is prohibited.<br>
+                🛡️ This portfolio is protected by advanced security measures.<br>
+                                 📧 For inquiries, please contact: sivasubramaniam141@gmail.com
+              </p>
+              <p style="font-size: 0.9rem; color: #888; margin-bottom: 30px;">
+                Developer Tools Detection Active | IP Logged | Session Monitored
+              </p>
+              <button onclick="this.parentElement.parentElement.remove()" 
+                      style="background: linear-gradient(135deg, #ff6b6b, #ffa726); 
+                             color: white; 
+                             border: none; 
+                             padding: 12px 30px; 
+                             border-radius: 25px; 
+                             font-size: 1rem; 
+                             cursor: pointer; 
+                             font-weight: bold;
+                             box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+                             transition: all 0.3s ease;">
+                I Understand - Close Warning
+              </button>
+            </div>
+          `;
+          
+          // Add hover effect to button
+          const button = overlay.querySelector('button');
+          button.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.boxShadow = '0 6px 20px rgba(255, 107, 107, 0.4)';
+          });
+          button.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+            this.style.boxShadow = '0 4px 15px rgba(255, 107, 107, 0.3)';
+          });
+          
+          document.body.appendChild(overlay);
+          
+          // Console warning
+          console.clear();
+          console.log('%c⚠️ STOP! ⚠️', 'color: #ff6b6b; font-size: 3rem; font-weight: bold;');
+          console.log('%cThis is a browser feature intended for developers. If someone told you to copy-paste something here, it is a scam and will give them access to your information.', 'color: #ffa726; font-size: 1.2rem;');
+          console.log('%c🔒 This code is proprietary and confidential.', 'color: #ff6b6b; font-size: 1.1rem; font-weight: bold;');
+                     console.log('%c📧 Contact: sivasubramaniam141@gmail.com for authorized access.', 'color: #4fc3f7; font-size: 1rem;');
+        }
+        
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+          showWarningMessage();
+          return false;
+        });
+        
+        // Disable common keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+          // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+          if (e.keyCode === 123 || 
+              (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) ||
+              (e.ctrlKey && e.keyCode === 85)) {
+            e.preventDefault();
+            showWarningMessage();
+            return false;
+          }
+        });
+        
+        // Additional protection - detect console usage
+        let devToolsChecker = () => {
+          let before = new Date();
+          debugger;
+          let after = new Date();
+          if (after - before > 100) {
+            showWarningMessage();
+          }
+        };
+        
+        // Run checker periodically
+        setInterval(devToolsChecker, 1000);
+        
+      })();
+    </script>
+</body>
+</html>
